@@ -15,10 +15,10 @@ main{
 fieldset{
   border:1px solid black;
   border-radius: 3px;
-  max-width:300px;
+  max-width:200px;
   width:100%;
 }
-fieldset > input{
+fieldset > label > input{
   margin-left:3%;
   margin-right:1%;
 }
