@@ -138,7 +138,8 @@ function useLocation(){
     boxFieldset.elements.checkLanguageRus.checked=true;
     languageSelectedRus();
   }else{
-    console.log(window.location.search);
+    // console.log(window.location.search);
+    randomLanguage(rA);
   }
 }
 //geolocation
@@ -151,3 +152,20 @@ function useLocation(){
 // };
 //
 // navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+let rA=getRandomInt(2);
+
+function randomLanguage(rA){
+  if(getRandomInt(2)==0){
+    boxFieldset.elements.checkLanguageRus.checked=true;
+    languageSelectedRus();
+  }else if(getRandomInt(2)==1){
+    boxFieldset.elements.checkLanguageLat.checked=true;
+    languageSelectedLat();
+  }else{
+    boxFieldset.elements.checkLanguageEng.checked=true;
+    languageSelected();
+  }
+}
